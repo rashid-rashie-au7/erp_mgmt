@@ -1,0 +1,116 @@
+/* 
+    Document   : brand_creatn_styl
+    Created on : Apr 30, 2013, 1:21:28 PM
+    Author     : miw3
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root 
+{ 
+    display: block;
+}
+
+.button-normal
+{
+
+    -fx-background-color:rgb(0,162,232);
+    -fx-text-fill: white;
+    -fx-background-size: 75px;
+
+}
+
+.button-normal:hover
+{ 
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 15, 0.0 , 0 , 1 );
+}
+
+
+.dark-blue {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+.dark-blue:hover
+{ 
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 70%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 70%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    /*-fx-effect: dropshadow( three-pass-box , -fx-focus-color , 15, 0.0 , 0 , 1 );*/
+    /*-fx-focus-color,*/
+}
+.dark-blue:focused{
+    -fx-background-color: 
+        #d0d0d0,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 75%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 75%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-insets: -1.4px, 0px, 1px, 2px;
+    -fx-background-radius: 6.4px, 5px, 4px, 3px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+.dark-blue:pressed{
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 50%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 50%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-padding: 0;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+  
+}
+/*.table-view .column-header, .table-view .filler {
+   -fx-text-fill: linear-gradient(white, #d0d0d0);
+
+     TODO: for some reason, this doesn't scale. 
+    -fx-font-size: 1.083333em;  13pt - 1 more than the default font 
+    -fx-size: 25;
+    -fx-border-style: solid;
+    -fx-border-color: 
+         
+          Inner border: we have different colours along the top, right, bottom and left.
+          Refer to RT-12298 for the spec.
+        
+        derive(-fx-base, 80%) 
+        linear-gradient(to bottom, derive(-fx-base,80%) 20%, derive(-fx-base,-10%) 90%)
+        derive(-fx-base, 10%) 
+        linear-gradient(to bottom, derive(-fx-base,80%) 20%, derive(-fx-base,-10%) 90%),
+         Outer border: 
+        transparent -fx-table-header-border-color -fx-table-header-border-color transparent;
+    -fx-border-insets: 0 1 1 0, 0 0 0 0;
+    -fx-border-width: 0.083333em, 0.083333em;
+}*/

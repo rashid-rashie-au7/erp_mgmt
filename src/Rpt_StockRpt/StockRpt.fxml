@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchrsales" prefHeight="654.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Rpt_StockRpt.StockRptController">
+   <children>
+      <AnchorPane fx:id="anchrmaster" layoutY="126.0" prefHeight="266.0" prefWidth="1029.0">
+         <children>
+            <TableView fx:id="tableData1" layoutX="10.0" layoutY="10.0" prefHeight="439.0" prefWidth="1003.0">
+               <columns>
+                  <TableColumn fx:id="colid1" prefWidth="110.0" text="Item Code" />
+                  <TableColumn fx:id="colname1" prefWidth="320.0" text="Item Name" />
+                  <TableColumn fx:id="colhsn1" prefWidth="110.0" text="HSN Code " />
+                  <TableColumn fx:id="colcat1" prefWidth="120.0" text="Category" />
+                  <TableColumn fx:id="colbrand1" prefWidth="120.0" resizable="false" text="Brand" />
+                  <TableColumn fx:id="colqty1" prefWidth="110.0" text="QTY" />
+                  <TableColumn fx:id="coluom1" prefWidth="110.0" text="UoM" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnexcelmaster" layoutX="911.0" layoutY="455.0" mnemonicParsing="false" onAction="#excelmasterOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+                     <image>
+                        <Image url="@../res/Excel-2-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnPrintmaster" layoutX="790.0" layoutY="456.0" mnemonicParsing="false" onAction="#printmasterOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+                     <image>
+                        <Image url="@../res/printer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="573.0" layoutY="84.0" text="Product Name :" />
+      <Label layoutX="66.0" layoutY="20.0" text="Stock Report" textFill="#08a48d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="694.0" endY="-7.62939453125E-6" layoutX="322.0" layoutY="39.0" startX="-135.0" strokeWidth="0.5" />
+      <ImageView fitHeight="55.0" fitWidth="63.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Back%20up/Store%2019-12-18/Store%20Mgmt%20Sys/src/images/Stock%20Report.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="87.0" text="Category :" />
+      <ComboBox fx:id="cmbCat" layoutX="351.0" layoutY="83.0" prefHeight="25.0" prefWidth="156.0" promptText="&lt;select&gt;" />
+      <TextField fx:id="txtSearch" layoutX="676.0" layoutY="80.0" prefHeight="25.0" prefWidth="222.0" promptText="Search Here....." />
+      <CheckBox fx:id="chkStock" layoutX="913.0" layoutY="84.0" mnemonicParsing="false" text="In Stock" />
+      <Label layoutX="11.0" layoutY="87.0" text="Ware House :" />
+      <ComboBox fx:id="cmbwh" layoutX="89.0" layoutY="83.0" prefHeight="25.0" prefWidth="156.0" promptText="&lt;select&gt;" />
+      <RadioButton fx:id="rbtmaster" layoutX="528.0" layoutY="52.0" mnemonicParsing="false" text="Stock Master" />
+      <RadioButton fx:id="rbtsales" layoutX="411.0" layoutY="51.0" mnemonicParsing="false" text="Stock For Sales" />
+      <AnchorPane fx:id="anchrsales" layoutX="-2.0" layoutY="124.0" prefHeight="525.0" prefWidth="1029.0">
+         <children>
+            <Button fx:id="btnPrint" layoutX="785.0" layoutY="456.0" mnemonicParsing="false" onAction="#printOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+                     <image>
+                        <Image url="@../res/printer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnexcel" layoutX="911.0" layoutY="455.0" mnemonicParsing="false" onAction="#excelOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+                     <image>
+                        <Image url="@../res/Excel-2-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="tableData" layoutX="12.0" layoutY="12.0" prefHeight="439.0" prefWidth="1003.0">
+               <columns>
+                  <TableColumn fx:id="colid" prefWidth="106.0" text="Item Code" />
+                  <TableColumn fx:id="colname" prefWidth="270.0" text="Item Name" />
+                  <TableColumn fx:id="colhsn" prefWidth="110.0" text="HSN Code " />
+                  <TableColumn fx:id="colcat" prefWidth="110.0" text="Category" />
+                  <TableColumn fx:id="colbrand" prefWidth="110.0" resizable="false" text="Brand" />
+                  <TableColumn fx:id="colqty" prefWidth="85.0" text="QTY" />
+                  <TableColumn fx:id="coluom" prefWidth="85.0" text="UoM" />
+                  <TableColumn fx:id="colunits" prefWidth="125.0" text="No:of Units" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="T_StockUpdation.StockUpdateController">
+   <children>
+      <Label layoutX="64.0" layoutY="57.0" text="Item Code :" />
+      <TextField fx:id="txtMcode" focusTraversable="false" layoutX="140.0" layoutY="53.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="62.0" layoutY="92.0" text="Item Name :" />
+      <Label layoutX="63.0" layoutY="126.0" text="Qty :" />
+      <TextField fx:id="txtMqty" editable="false" focusTraversable="false" layoutX="140.0" layoutY="122.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="62.0" layoutY="194.0" text="Batch No :" />
+      <TextField fx:id="txtbatch" focusTraversable="false" layoutX="140.0" layoutY="191.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="417.0" layoutY="57.0" text="Item Code :" />
+      <TextField fx:id="txtcode" editable="false" focusTraversable="false" layoutX="493.0" layoutY="53.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="417.0" layoutY="92.0" text="Item Name :" />
+      <Label layoutX="417.0" layoutY="161.0" text="No: of Units :" />
+      <Label layoutX="417.0" layoutY="126.0" text="Qty :" />
+      <TextField fx:id="txtqty" layoutX="493.0" layoutY="122.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="722.0" layoutY="57.0" text="Expiry Date :" />
+      <DatePicker fx:id="dpExpiry" layoutX="823.0" layoutY="53.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="722.0" layoutY="92.0" text="WholeSale Rate :" />
+      <TextField fx:id="txtwholesale" layoutX="823.0" layoutY="88.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="722.0" layoutY="126.0" text="Retail Rate :" />
+      <TextField fx:id="txtretail" layoutX="823.0" layoutY="122.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="722.0" layoutY="161.0" text="Barcode :" />
+      <TextField fx:id="txtbarcode" layoutX="823.0" layoutY="157.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="11.0" layoutY="15.0" text="Item Master :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="156.0" endY="7.62939453125E-6" layoutX="177.0" layoutY="28.0" startX="-84.0" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="15.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+         <image>
+            <Image url="@../res/1384004307_testimonials.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="366.0" layoutY="14.0" text="Item Creation :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x11" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x21" />
+         </textFill>
+      </Label>
+      <Line endX="492.0" endY="-7.62939453125E-6" layoutX="532.0" layoutY="27.0" startX="-75.0" startY="-7.62939453125E-6" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="370.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+         <image>
+            <Image url="@../res/1384004307_testimonials.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblView" layoutX="13.0" layoutY="227.0" prefHeight="295.0" prefWidth="1002.0">
+        <columns>
+          <TableColumn fx:id="colcode" prefWidth="85.0" resizable="false" text="Item Code" />
+          <TableColumn fx:id="colname" prefWidth="215.0" resizable="false" text="Item Name " />
+            <TableColumn fx:id="colqty" prefWidth="70.0" resizable="false" text="Qty" />
+            <TableColumn fx:id="colunit" prefWidth="70.0" resizable="false" text="UoM" />
+            <TableColumn fx:id="colstock" resizable="false" text="No:of Units" />
+            <TableColumn fx:id="colexp" prefWidth="90.0" resizable="false" text="Expiry Date" />
+            <TableColumn fx:id="colbatch" prefWidth="90.0" resizable="false" text="Batch No" />
+            <TableColumn fx:id="colbarcode" prefWidth="110.0" resizable="false" text="Barcode" />
+            <TableColumn fx:id="colwhole" prefWidth="95.0" resizable="false" text="Wholesale " />
+            <TableColumn fx:id="colretail" prefWidth="95.0" resizable="false" text="Retail Rate" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBarcode" layoutX="904.0" layoutY="189.0" mnemonicParsing="false" onAction="#barcode_onAction" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Generate Barcode" />
+      <Button fx:id="btnSave" layoutX="567.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnsave_onaction" prefHeight="52.0" prefWidth="118.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Save " />
+      <Button fx:id="btnClear" layoutX="712.0" layoutY="536.0" mnemonicParsing="false" onAction="#clear_onAction" prefHeight="52.0" prefWidth="118.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear" />
+      <Hyperlink fx:id="hpl_Remove" layoutX="937.0" layoutY="524.0" onAction="#hpl_onAction" text="Remove Row" textFill="#f50505">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnclearItem" layoutX="823.0" layoutY="189.0" mnemonicParsing="false" onAction="#clearItem_onAction" prefHeight="25.0" prefWidth="72.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear" />
+      <HBox fx:id="hbxUnit" layoutX="493.0" layoutY="191.0" prefHeight="25.0" prefWidth="192.0" />
+      <HBox fx:id="hbxname" layoutX="140.0" layoutY="87.0" prefHeight="25.0" prefWidth="180.0" />
+      <HBox fx:id="hbxitem" layoutX="493.0" layoutY="87.0" prefHeight="25.0" prefWidth="192.0" />
+      <TextField fx:id="txtunits" layoutX="493.0" layoutY="157.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="417.0" layoutY="194.0" text="UoM :" />
+      <Label layoutX="62.0" layoutY="161.0" text="UoM :" />
+      <TextField fx:id="txtuom" editable="false" focusTraversable="false" layoutX="141.0" layoutY="157.0" prefHeight="25.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>

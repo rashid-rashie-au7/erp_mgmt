@@ -1,0 +1,41 @@
+.menu-bar{
+	-fx-background-radius:  20;
+  
+    -fx-border-radius: 20;
+    
+  -fx-background-color:#e0e4e1;
+  -fx-border-color:  #4caf50;
+ -fx-border-width: 2
+
+}
+
+
+
+.menu-bar .label {
+    -fx-font-size: 14 pt;
+    -fx-font-family: "Helvetica";
+    -fx-text-fill: black;
+
+}
+
+.menu:hover {
+    -fx-background-color: #4caf50;
+    -fx-background-radius:  20;
+}
+
+
+.menu-item .label{
+    -fx-font-size: 13 pt;
+    -fx-label-line-length: 6;
+    -fx-background-color: #ffffff;
+    -fx-background-radius:  20;
+}
+
+.nav:active
+{
+    background-color:#4caf50;    
+}
+
+
+
+

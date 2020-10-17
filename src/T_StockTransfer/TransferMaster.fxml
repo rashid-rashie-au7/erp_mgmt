@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbx_main" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="T_StockTransfer.TransferMasterController">
+   <children>
+      <SplitPane fx:id="sp_main" dividerPositions="0.29797979797979796" prefHeight="602.0" prefWidth="1020.0">
+         <items>
+            <AnchorPane fx:id="anchr_sidebar" maxWidth="200.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="200.0">
+               <children>
+                  <Accordion fx:id="accr_option" layoutY="1.0" maxWidth="200.0" minWidth="178.0" prefWidth="200.0">
+                     <panes>
+                        <TitledPane fx:id="tp_options" animated="false" prefHeight="26.0" prefWidth="191.0" styleClass="label1" text="Transfer Options">
+                           <content>
+                              <AnchorPane fx:id="anchr_options" maxHeight="189.0" minHeight="-Infinity" minWidth="0.0" prefHeight="189.0" prefWidth="198.0">
+                                 <children>
+                                    <VBox fx:id="vbx_btn" layoutX="14.0" layoutY="1.0" prefHeight="184.0" prefWidth="169.0">
+                                       <children>
+                                          <Button fx:id="btnAdd" alignment="CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnadd_onaction" prefHeight="45.0" prefWidth="165.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css" text="ADD " textAlignment="RIGHT" textOverrun="LEADING_WORD_ELLIPSIS">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/1384012614_netvibes.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="btnEdit" alignment="CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnedit_onaction" prefHeight="45.0" prefWidth="165.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css" text="EDIT" textAlignment="RIGHT" textOverrun="LEADING_WORD_ELLIPSIS">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/1384012867_pencil.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="btnDelete" alignment="CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btndelete_onaction" prefHeight="45.0" prefWidth="165.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css" text="DELETE" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/1384013036_button_cancel.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="btnPrint" alignment="CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnprint_onaction" prefHeight="45.0" prefWidth="165.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css" text="PRINT" textAlignment="RIGHT" textOverrun="LEADING_WORD_ELLIPSIS">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/printer.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchr_main" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <VBox fx:id="vbxMain" prefWidth="805.0">
+                     <children>
+                        <Accordion fx:id="accrSearch" prefWidth="639.0">
+                           <panes>
+                              <TitledPane fx:id="tpSearch" animated="false" prefHeight="250.0" prefWidth="916.0" text="Search Transfer">
+                                 <content>
+                                    <AnchorPane fx:id="anchr_search" minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="1031.0">
+                                       <children>
+                                          <Label layoutX="97.0" layoutY="16.0" text="Search :" />
+                                          <TextField fx:id="txtSearch" layoutX="149.0" layoutY="12.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <Button fx:id="btnShow" layoutX="519.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnshow_onaction" prefHeight="25.0" prefWidth="145.0" styleClass="oddRound" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Show Advance Search" />
+                                          <Button fx:id="btnHide" layoutX="519.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnhide_onaction" prefHeight="25.0" prefWidth="145.0" styleClass="oddRound" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Hide Advance Search" />
+                                          <Button fx:id="btnClear" layoutX="417.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnClear_onaction" prefHeight="27.0" prefWidth="82.0" styleClass="oddRound" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear" />
+                                          <AnchorPane fx:id="anchrAdvSearch" layoutX="127.0" layoutY="49.0" prefHeight="165.0" prefWidth="520.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="165.0" stroke="BLACK" strokeType="INSIDE" width="516.0" />
+                                                <Label layoutX="93.0" layoutY="85.0" text="Transfer Date :" />
+                                                <Label layoutX="92.0" layoutY="121.0" text="Ware House :" />
+                                                <Label layoutX="93.0" layoutY="49.0" text="Transfer ID :" />
+                                                <TextField fx:id="txtid" layoutX="209.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <TextField fx:id="txtwh" layoutX="209.0" layoutY="117.0" prefHeight="25.0" prefWidth="200.0" />
+                                                <Label layoutX="7.0" layoutY="6.0" text="ADVANCE SEARCH">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <DatePicker fx:id="dpdate" layoutX="209.0" layoutY="81.0" prefHeight="25.0" prefWidth="200.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                        <Accordion fx:id="accrtable" prefHeight="350.0" prefWidth="800.0">
+                           <panes>
+                              <TitledPane fx:id="tpTable" animated="false" prefHeight="350.0" prefWidth="1110.0" text="0 Items Found">
+                                 <content>
+                                    <AnchorPane fx:id="anchrTable" minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="1032.0">
+                                       <children>
+                                          <TableView fx:id="tblView" maxWidth="1103.0" prefHeight="324.0" prefWidth="798.0">
+                                             <columns>
+                                                <TableColumn fx:id="colid" prefWidth="120.0" resizable="false" text="Transfer Code" />
+                                                <TableColumn fx:id="coldate" prefWidth="145.0" text="Date" />
+                                                <TableColumn fx:id="coltime" prefWidth="151.0" resizable="false" text="Time" />
+                                                <TableColumn fx:id="colwh" prefWidth="224.0" resizable="false" text="Ware House" />
+                                                <TableColumn fx:id="colitems" prefWidth="155.0" resizable="false" text="Total Items" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</HBox>

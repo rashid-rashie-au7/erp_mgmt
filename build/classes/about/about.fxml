@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="365.0" prefWidth="525.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="about.AboutController">
+   <children>
+      <Label fx:id="lbl1" layoutX="157.0" layoutY="179.0" text="M A COMPLEX, NEAR JALAKSHMI SILKS" />
+      <Label fx:id="lbl2" layoutX="177.0" layoutY="196.0" text="ANNIE HALL ROAD, CALICUT-02" />
+      <Label layoutX="-137.0" layoutY="9.0" text="Label" />
+      <ImageView fx:id="imgview" fitHeight="125.0" fitWidth="300.0" layoutX="128.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../login/durgag.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="190.0" layoutY="214.0" text="Contact us:" />
+      <Label fx:id="lbl3" layoutX="258.0" layoutY="214.0" text="0495 4013055" />
+      <Label fx:id="lbl5" layoutX="160.0" layoutY="249.0" text="Email :  durgasoftwaretech@gmail.com" />
+      <Label fx:id="lbl4" layoutX="188.0" layoutY="232.0" text="9946 487 074, 9605 441 674" />
+      <Label fx:id="lbl6" layoutX="166.0" layoutY="266.0" text="Website :  www.durgasoftechs.com" />
+   </children>
+</AnchorPane>

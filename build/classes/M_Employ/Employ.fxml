@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="M_Employ.EmployController">
+   <children>
+      <Label layoutX="66.0" layoutY="49.0" text="Employee ID :" />
+      <TextField fx:id="txtCode" editable="false" focusTraversable="false" layoutX="183.0" layoutY="45.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="66.0" layoutY="83.0" text="Employee Name :" />
+      <TextField fx:id="txtName" layoutX="183.0" layoutY="79.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="66.0" layoutY="118.0" text="Gender :" />
+      <RadioButton fx:id="rbtMale" layoutX="193.0" layoutY="118.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="rbtFemale" layoutX="291.0" layoutY="118.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="66.0" layoutY="153.0" text="Mobile :" />
+      <TextField fx:id="txtMob" layoutX="183.0" layoutY="149.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="66.0" layoutY="188.0" text="Email Id :" />
+      <TextField fx:id="txtEmail" layoutX="183.0" layoutY="184.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="66.0" layoutY="223.0" text="Qualification :" />
+      <TextField fx:id="txtQul" layoutX="183.0" layoutY="219.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="66.0" layoutY="259.0" text="Department :" />
+      <ComboBox fx:id="cmbDept" layoutX="183.0" layoutY="254.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="458.0" layoutY="49.0" text="House Name/No :" />
+      <TextField fx:id="txtHouse" layoutX="574.0" layoutY="45.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="458.0" layoutY="83.0" text="Street :" />
+      <TextField fx:id="txtStreet" layoutX="574.0" layoutY="79.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="458.0" layoutY="118.0" text="City :" />
+      <TextField fx:id="txtCity" layoutX="574.0" layoutY="114.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="458.0" layoutY="153.0" text="District :" />
+      <TextField fx:id="txtDis" layoutX="574.0" layoutY="149.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="188.0" text="State :" />
+      <TextField fx:id="txtState" layoutX="573.0" layoutY="184.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="223.0" text="ID Card :" />
+      <ComboBox fx:id="cmbId" layoutX="573.0" layoutY="219.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="258.0" text="ID Card No :" />
+      <TextField fx:id="txtIdno" layoutX="573.0" layoutY="254.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="54.0" layoutY="339.0" text="User Name :" />
+      <TextField fx:id="txtUsername" layoutX="183.0" layoutY="335.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="54.0" layoutY="374.0" text="Password :" />
+      <TextField fx:id="txtPassword" layoutX="183.0" layoutY="370.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="338.0" text="Joining Date :" />
+      <DatePicker fx:id="dpJoin" layoutX="577.0" layoutY="335.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="374.0" text="Salary :" />
+      <TextField fx:id="txtSalary" layoutX="577.0" layoutY="371.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="457.0" layoutY="409.0" text="Comments :" />
+      <TextField fx:id="txtComments" layoutX="577.0" layoutY="405.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="8.0" layoutY="13.0" text="General :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="194.0" endY="0.0" layoutX="174.0" layoutY="26.0" startX="-110.0" startY="0.0" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="12.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+         <image>
+            <Image url="@../res/1384004307_testimonials.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="401.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384344397_Home.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="400.0" layoutY="14.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x12" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x22" />
+         </textFill>
+      </Label>
+      <Line endX="194.0" endY="0.0" layoutX="568.0" layoutY="27.0" startX="-110.0" startY="0.0" />
+      <Label layoutX="9.0" layoutY="299.0" text="Login Info :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x11" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.094" red="0.000" fx:id="x3" />
+         </textFill>
+      </Label>
+      <Line endX="182.0" endY="0.0" layoutX="184.0" layoutY="312.0" startX="-104.0" startY="0.0" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="11.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384001555_PadLock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="403.0" layoutY="304.0" text="Others :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x13" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.094" red="0.000" fx:id="x31" />
+         </textFill>
+      </Label>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="400.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384279991_shapes.png" />
+         </image>
+      </ImageView>
+      <Line endX="197.0" endY="0.0" layoutX="563.0" layoutY="317.0" startX="-110.0" startY="0.0" />
+      <Button fx:id="btnUpdate" layoutX="282.0" layoutY="443.0" mnemonicParsing="false" onAction="#btnupdate_onAction" prefHeight="49.0" prefWidth="96.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="282.0" layoutY="444.0" mnemonicParsing="false" onAction="#btn_save_onAction" prefHeight="49.0" prefWidth="96.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear" layoutX="433.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnclear_onAction" prefHeight="49.0" prefWidth="96.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblpass" layoutX="184.0" layoutY="433.0" textFill="#f80202" />
+   </children>
+</AnchorPane>

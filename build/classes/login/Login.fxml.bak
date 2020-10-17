@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minWidth="587.0" prefHeight="367.0" prefWidth="587.0" styleClass="oddRound, angr" xmlns:fx="http://javafx.com/fxml" fx:controller="login.LoginController">
+  <children>
+    <TextField fx:id="username" layoutX="183.0" layoutY="174.0" prefWidth="200.0" />
+    <PasswordField fx:id="password" layoutX="184.0" layoutY="238.0" prefWidth="200.0" />
+    <Button fx:id="button_click" layoutX="236.0" layoutY="287.0" mnemonicParsing="false" onAction="#button_click_action" prefHeight="24.0" prefWidth="79.0" styleClass="login_btn, butto" text="">
+      <effect>
+        <DropShadow />
+      </effect>
+    </Button>
+    <Label layoutX="184.0" layoutY="153.0" text="Username:" />
+    <Label layoutX="184.0" layoutY="216.0" prefWidth="70.0" text="Password:" />
+    <Button id="button_click" fx:id="cancel" layoutX="563.0" layoutY="13.0" minHeight="16.0" minWidth="13.0" mnemonicParsing="false" onAction="#cancel_onaction" prefHeight="14.0" prefWidth="15.0" styleClass="cancel, buttn" text="">
+      <font>
+        <Font size="12.0" />
+      </font>
+    </Button>
+    <Label layoutX="15.0" layoutY="324.0" prefHeight="32.0" prefWidth="79.0" styleClass="miw" text="">
+      <effect>
+        <DropShadow />
+      </effect>
+    </Label>
+    <Label fx:id="compony_name" layoutX="337.0" layoutY="10.0" prefHeight="24.0" prefWidth="221.0" text="">
+      <font>
+        <Font name="System Bold" size="16.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.639" green="0.373" red="0.043" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="234.0" layoutY="105.0" prefHeight="22.0" prefWidth="91.0" text="LOGIN">
+      <effect>
+        <DropShadow />
+      </effect>
+    </Label>
+    <Label layoutX="292.0" layoutY="89.0" prefHeight="42.0" prefWidth="39.0" style="" styleClass="login_img" text="">
+      <effect>
+        <DropShadow />
+      </effect>
+    </Label>
+    <Line endX="190.0" endY="0.0" layoutX="243.0" layoutY="138.0" startX="-100.0" strokeWidth="0.1" />
+    <Label layoutX="174.0" layoutY="344.0" prefHeight="22.0" prefWidth="249.5" text="Copyright @ MIIW Soft Co 2013 All rights reserved">
+      <font>
+        <Font size="10.0" />
+      </font>
+    </Label>
+    <Label id="compny" fx:id="compny_address" layoutX="337.0" layoutY="34.0" prefHeight="23.0" prefWidth="221.0" text="" textFill="$x2">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x3" />
+      </font>
+    </Label>
+    <ImageView id="sm.png" layoutX="17.0" layoutY="13.0">
+      <effect>
+        <Reflection fraction="1.0" topOpacity="0.23015873015873017" />
+      </effect>
+      <image>
+        <Image url="@sm.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="logo.jpg" layoutX="376.0" layoutY="9.0" visible="false">
+      <image>
+        <Image url="@../printer/logo.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+  <stylesheets>
+    <URL value="@Login_styl.css" />
+  </stylesheets>
+</AnchorPane>

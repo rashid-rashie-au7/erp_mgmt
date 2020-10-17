@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="T_Sales.Create_SalesController">
+   <children>
+      <Label fx:id="lblBillNo" layoutX="73.0" layoutY="43.0" text="Bill No :" />
+      <TextField fx:id="txtbillno" editable="false" focusTraversable="false" layoutX="164.0" layoutY="39.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="73.0" layoutY="74.0" text="Date &amp; Time :" />
+      <DatePicker fx:id="dpDate" editable="false" focusTraversable="false" layoutX="164.0" layoutY="70.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtTime" editable="false" focusTraversable="false" layoutX="275.0" layoutY="70.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="73.0" layoutY="105.0" text="Ware House :" />
+      <Label layoutX="73.0" layoutY="136.0" text="Agent :" />
+      <Label layoutX="431.0" layoutY="43.0" text="Client ID :" />
+      <TextField fx:id="txtid" layoutX="526.0" layoutY="39.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="431.0" layoutY="74.0" text="Client Name :" />
+      <HBox fx:id="hbxName" layoutX="526.0" layoutY="70.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="431.0" layoutY="105.0" text="Mobile :" />
+      <TextField fx:id="txtmob" layoutX="526.0" layoutY="101.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="729.0" layoutY="105.0" text="State :" />
+      <RadioButton fx:id="rbtmale" layoutX="541.0" layoutY="136.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="rbtfemale" layoutX="616.0" layoutY="136.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="729.0" layoutY="43.0" text="Place :" />
+      <TextField fx:id="txtplace" layoutX="809.0" layoutY="39.0" prefWidth="175.0" />
+      <Label layoutX="729.0" layoutY="74.0" text="District :" />
+      <TextField fx:id="txtdist" layoutX="809.0" layoutY="70.0" prefWidth="175.0" />
+      <Label layoutX="729.0" layoutY="136.0" text="GSTIN :" />
+      <TextField fx:id="txtgstin" layoutX="809.0" layoutY="132.0" prefHeight="25.0" prefWidth="175.0" />
+      <AnchorPane id="AnchorPane" layoutX="17.0" layoutY="14.0">
+         <children>
+            <Label layoutX="0.0" layoutY="0.0" text="Bill Information">
+               <font>
+                  <Font name="System Bold" size="13.0" fx:id="x1" />
+               </font>
+               <textFill>
+                  <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+               </textFill>
+            </Label>
+            <Line endX="100.0" endY="0.0" layoutX="228.0" layoutY="12.0" startX="-127.0" startY="0.0" />
+            <Label font="$x1" layoutX="375.0" text="Customer Information" textFill="#001899" />
+            <Line endX="322.0" endY="-0.9999847412109375" layoutX="647.0" layoutY="13.0" startX="-129.0" startY="-0.9999847412109375" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblview" layoutX="18.0" layoutY="174.0" prefHeight="255.0" prefWidth="963.0">
+        <columns>
+          <TableColumn fx:id="colbar" prefWidth="130.0" text="BarCode " />
+          <TableColumn fx:id="colcode" prefWidth="120.0" text="Item Code " />
+            <TableColumn fx:id="colname" prefWidth="200.0" text="Item Name" />
+            <TableColumn fx:id="colrate" prefWidth="110.0" text="Rate" />
+            <TableColumn fx:id="colqty" prefWidth="90.0" text="Qty" />
+            <TableColumn fx:id="colgst" prefWidth="90.0" text="Gst %" />
+            <TableColumn fx:id="colgstamt" prefWidth="100.0" text="Gst Amount" />
+            <TableColumn fx:id="coltot" prefWidth="120.0" text="Total Amount" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="anchrtot" layoutX="461.0" layoutY="435.0" prefHeight="247.0" prefWidth="307.0" styleClass="oddRoundElement" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="24.0" layoutY="10.0" text="No of Items :" />
+            <Label layoutX="17.0" layoutY="211.0" text="Net Amount :">
+               <font>
+                  <Font name="System Bold" size="13.5" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="104.0" text="Discount :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="71.0" text="Gst Amount :">
+               <font>
+                  <Font name="System Bold" size="12.5" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="36.0" text="Grand Total">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblqty" layoutX="264.0" layoutY="11.0" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="197.0" layoutY="10.0" text="Total Qty :" />
+            <Label fx:id="lblitems" layoutX="108.0" layoutY="12.0" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtgrand" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="33.0" prefHeight="29.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.5" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtgstamt" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="68.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdiscper" alignment="CENTER_RIGHT" layoutX="134.0" layoutY="100.0" prefHeight="25.0" prefWidth="59.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdisc" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="100.0" prefHeight="25.0" prefWidth="69.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtship" alignment="CENTER_RIGHT" layoutX="134.0" layoutY="134.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtnetamt" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="201.0" prefHeight="30.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="196.0" layoutY="104.0" text="\%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="103.0" text="₹">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="137.0" text="Shippment Charge :">
+               <font>
+                  <Font name="System Bold" size="11.7" />
+               </font>
+            </Label>
+            <TextField fx:id="txtKfc" alignment="CENTER_RIGHT" layoutX="134.0" layoutY="168.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="17.0" layoutY="171.0" text="KFC 1% :">
+               <font>
+                  <Font name="System Bold" size="11.7" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnSave" layoutX="801.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnsave_onAction" prefHeight="57.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="SAVE" />
+      <Button fx:id="btnClear" layoutX="801.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnclear_onAction" prefHeight="57.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="CLEAR" />
+      <Hyperlink fx:id="hpl_remove" layoutX="900.0" layoutY="432.0" onAction="#hplremove_onAction" text="Remove" textFill="#f00202">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <AnchorPane fx:id="anchrtot1" layoutX="98.0" layoutY="486.0" prefHeight="147.0" prefWidth="293.0" styleClass="border1" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="18.0" layoutY="116.0" text="IGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="81.0" text="CGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="45.0" text="SGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtsgst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="42.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtcgst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtigst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="112.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rbtsgst" layoutX="70.0" layoutY="9.0" mnemonicParsing="false" text="SGST " />
+            <RadioButton fx:id="rbtigst" layoutX="173.0" layoutY="9.0" mnemonicParsing="false" text="IGST" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnPrint" layoutX="801.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnprint_onAction" prefHeight="57.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="PRINT" />
+      <Label layoutX="431.0" layoutY="136.0" text="Gender :" />
+      <ComboBox fx:id="cmbagent" layoutX="164.0" layoutY="132.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtstate" layoutX="809.0" layoutY="101.0" prefWidth="175.0" />
+      <ComboBox fx:id="cmbwh" layoutX="164.0" layoutY="101.0" prefHeight="25.0" prefWidth="175.0" />
+      <Hyperlink fx:id="hplImport" disable="true" layoutX="26.0" layoutY="434.0" onAction="#Import_Onaction" opacity="0.0" text="Import Excel Data" textFill="#ee0202" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.5" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

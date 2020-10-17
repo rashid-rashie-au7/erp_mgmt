@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="M_Supplier.SupplierController">
+   <children>
+      <Label layoutX="62.0" layoutY="59.0" text="Supplier Code :" />
+      <TextField fx:id="txtCode" editable="false" focusTraversable="false" layoutX="179.0" layoutY="55.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="62.0" layoutY="93.0" text="Supplier Name :" />
+      <TextField fx:id="txtName" layoutX="179.0" layoutY="89.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="62.0" layoutY="128.0" text="Street :" />
+      <TextField fx:id="txtStreet" layoutX="180.0" layoutY="124.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="62.0" layoutY="163.0" text="City :" />
+      <TextField fx:id="txtCity" layoutX="180.0" layoutY="159.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="62.0" layoutY="197.0" text="State :" />
+      <TextField fx:id="txtState" layoutX="180.0" layoutY="193.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="454.0" layoutY="59.0" text="Person Name :" />
+      <TextField fx:id="txtPname" layoutX="562.0" layoutY="55.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="454.0" layoutY="93.0" text="Mobile :" />
+      <TextField fx:id="txtmob" layoutX="562.0" layoutY="89.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="454.0" layoutY="128.0" text="Office Phone :" />
+      <TextField fx:id="txtOffice" layoutX="562.0" layoutY="124.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="453.0" layoutY="163.0" text="Email :" />
+      <TextField fx:id="txtEmail" layoutX="562.0" layoutY="159.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="453.0" layoutY="196.0" text="Website :" />
+      <TextField fx:id="txtweb" layoutX="562.0" layoutY="193.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="61.0" layoutY="278.0" text="Bank Name :" />
+      <TextField fx:id="txtBank" layoutX="182.0" layoutY="273.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="61.0" layoutY="313.0" text="Branch :" />
+      <TextField fx:id="txtBranch" layoutX="182.0" layoutY="308.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="61.0" layoutY="348.0" text="IFSC Code :" />
+      <TextField fx:id="txtIfsc" layoutX="182.0" layoutY="343.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="61.0" layoutY="383.0" text="Account No :" />
+      <TextField fx:id="txtAcno" layoutX="182.0" layoutY="378.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="61.0" layoutY="417.0" text="GSTIN :" />
+      <TextField fx:id="txtGst" layoutX="183.0" layoutY="412.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="4.0" layoutY="23.0" text="General :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="194.0" endY="0.0" layoutX="170.0" layoutY="36.0" startX="-110.0" startY="0.0" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+         <image>
+            <Image url="@../res/1385731234_Manager.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="397.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384343980_phone.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="396.0" layoutY="24.0" text="Contact :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x12" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x22" />
+         </textFill>
+      </Label>
+      <Line endX="194.0" endY="0.0" layoutX="564.0" layoutY="37.0" startX="-113.0" startY="0.0" />
+      <Label layoutX="5.0" layoutY="236.0" text="Bank Info :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x11" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.094" red="0.000" fx:id="x3" />
+         </textFill>
+      </Label>
+      <Line endX="570.0" endY="0.0" layoutX="180.0" layoutY="249.0" startX="-109.0" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="7.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/bank.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnUpdate" layoutX="568.0" layoutY="295.0" mnemonicParsing="false" onAction="#btnupdate_onAction" prefHeight="56.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="568.0" layoutY="295.0" mnemonicParsing="false" onAction="#btn_save_onAction" prefHeight="56.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear" layoutX="568.0" layoutY="373.0" mnemonicParsing="false" onAction="#btnclear_onAction" prefHeight="56.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

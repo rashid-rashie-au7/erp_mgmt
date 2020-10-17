@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="1027.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Rpt_Purchase.Po_rptController">
+   <children>
+      <TableView fx:id="tableData" layoutX="12.0" layoutY="105.0" prefHeight="468.0" prefWidth="1003.0">
+         <columns>
+            <TableColumn fx:id="colno" prefWidth="100.0" resizable="false" text="PURCHASE ID" />
+            <TableColumn fx:id="coldate" prefWidth="100.0" resizable="false" text="DATE" />
+            <TableColumn fx:id="colsup" prefWidth="230.0" resizable="false" text="SUPPLIER" />
+            <TableColumn fx:id="colinvoice" prefWidth="100.0" resizable="false" text="INVOICE NO" />
+            <TableColumn fx:id="colitems" prefWidth="86.0" resizable="false" text="ITEMS" />
+            <TableColumn fx:id="colgrand" prefWidth="110.0" resizable="false" text="GRAND TOTAL" />
+            <TableColumn fx:id="colgst" prefWidth="100.0" resizable="false" text="GST AMOUNT" />
+            <TableColumn fx:id="colnet" prefWidth="100.0" resizable="false" text="NET AMOUNT" />
+            <TableColumn fx:id="colstatus" prefWidth="75.0" resizable="false" text="STATUS" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnPrint" layoutX="814.0" layoutY="584.0" mnemonicParsing="false" onAction="#printOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+               <image>
+                  <Image url="@../res/printer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnexcel" layoutX="920.0" layoutY="579.0" mnemonicParsing="false" onAction="#excelOnAction" prefHeight="47.0" prefWidth="92.0" styleClass="invisble_btn" stylesheets="@../css/invisble_btn.css">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" styleClass="invisble_btn">
+               <image>
+                  <Image url="@../res/Excel-2-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="69.0" layoutY="16.0" text="Purchase Report" textFill="#08a48d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="694.0" endY="-7.62939453125E-6" layoutX="323.0" layoutY="35.0" startX="-102.0" startY="-7.62939453125E-6" strokeWidth="0.5" />
+      <ImageView fitHeight="55.0" fitWidth="63.0" layoutX="11.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/po%20Report.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="722.0" layoutY="68.0" text="Supplier :" />
+      <ComboBox fx:id="cmbsup" layoutX="782.0" layoutY="64.0" prefHeight="25.0" prefWidth="211.0" promptText="&lt;select&gt;" />
+      <DatePicker fx:id="dpfrom" layoutX="103.0" layoutY="64.0" />
+      <Label layoutX="23.0" layoutY="68.0" text="From Date :" />
+      <DatePicker fx:id="dpto" layoutX="374.0" layoutY="64.0" />
+      <Label layoutX="316.0" layoutY="68.0" text="To Date :" />
+      <Label layoutX="297.0" layoutY="593.0" text="Grand Total :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="628.0" text="GST Amount :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtgrand" alignment="CENTER_RIGHT" layoutX="380.0" layoutY="589.0" prefHeight="25.0" prefWidth="168.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtgst" alignment="CENTER_RIGHT" layoutX="380.0" layoutY="623.0" prefHeight="25.0" prefWidth="168.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="636.0" layoutY="583.0" text="Total Net Amount">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttot" alignment="CENTER_RIGHT" layoutX="593.0" layoutY="610.0" prefHeight="38.0" prefWidth="168.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

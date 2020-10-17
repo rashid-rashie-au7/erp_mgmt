@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="726.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="T_Client.ClientCreationController">
+   <children>
+      <Label layoutX="63.0" layoutY="46.0" text="Client ID :" />
+      <TextField fx:id="txtcode" editable="false" focusTraversable="false" layoutX="158.0" layoutY="42.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="63.0" layoutY="82.0" text="Client Name :" />
+      <TextField fx:id="txtname" layoutX="158.0" layoutY="76.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="64.0" layoutY="114.0" text="Gender :" />
+      <RadioButton fx:id="rbtmale" layoutX="171.0" layoutY="115.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="rbtfemale" layoutX="250.0" layoutY="115.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="66.0" layoutY="149.0" text="Mobile :" />
+      <TextField fx:id="txtmob" layoutX="157.0" layoutY="145.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="66.0" layoutY="184.0" text="Office :" />
+      <TextField fx:id="txtoffice" layoutX="157.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="66.0" layoutY="218.0" text="Email :" />
+      <TextField fx:id="txtemail" layoutX="157.0" layoutY="214.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="46.0" text="Place :" />
+      <TextField fx:id="txtplace" layoutX="529.0" layoutY="42.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="82.0" text="Street :" />
+      <TextField fx:id="txtstreet" layoutX="529.0" layoutY="76.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="117.0" text="Land Mark :" />
+      <TextField fx:id="txtland" layoutX="529.0" layoutY="110.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="150.0" text="Zip Code :" />
+      <TextField fx:id="txtzip" layoutX="529.0" layoutY="145.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="184.0" text="District :" />
+      <TextField fx:id="txtdis" layoutX="529.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="449.0" layoutY="218.0" text="State :" />
+      <TextField fx:id="txtstate" layoutX="529.0" layoutY="214.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="72.0" layoutY="296.0" text="Occupation :" />
+      <TextField fx:id="txtOccp" layoutX="160.0" layoutY="292.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="73.0" layoutY="332.0" text="Type :" />
+      <RadioButton fx:id="rbtRetail" layoutX="164.0" layoutY="330.0" mnemonicParsing="false" text="Retailer" />
+      <RadioButton fx:id="rbtWhole" layoutX="249.0" layoutY="330.0" mnemonicParsing="false" text="Whole Saler" />
+      <Label layoutX="73.0" layoutY="366.0" text="GSTIN :" />
+      <TextField fx:id="txtgst" layoutX="160.0" layoutY="362.0" prefHeight="25.0" prefWidth="180.0" />
+      <Button fx:id="btnupdate" layoutX="532.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnupdate_onaction" prefHeight="52.0" prefWidth="136.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="UPDATE" />
+      <Button fx:id="btnsave" layoutX="533.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnsave_onaction" prefHeight="52.0" prefWidth="136.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="SAVE" />
+      <Button fx:id="btnclear" layoutX="532.0" layoutY="341.0" mnemonicParsing="false" onAction="#btn_clear_onaction" prefHeight="52.0" prefWidth="136.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="CLEAR" />
+      <Label layoutX="9.0" layoutY="12.0" text="General">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="177.0" layoutX="170.0" layoutY="24.0" startX="-100.0" startY="0.0" />
+      <Label layoutX="14.0" layoutY="262.0" text="Others">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="141.0" endY="0.0" layoutX="207.0" layoutY="272.0" startX="-142.0" startY="0.0" />
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="14.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384004263_clients.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="14.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384279991_shapes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="384.0" layoutY="11.0" text="Address">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.094" red="0.000" fx:id="x3" />
+         </textFill>
+      </Label>
+      <Line endX="139.0" layoutX="582.0" layoutY="22.0" startX="-133.0" startY="0.0" />
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="389.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/1384344397_Home.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

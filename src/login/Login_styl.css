@@ -1,0 +1,122 @@
+/* 
+    Document   : brand_creatn_styl
+    Created on : Apr 30, 2013, 1:21:28 PM
+    Author     : miw3
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+
+/*
+.button{
+    -fx-background-color: #60b000; 
+    -fx-background-color:rgb(174,219,255);
+    -fx-text-fill: white;
+    -fx-background-size: 75px;
+-fx-background-color:rgb(0,162,232);
+    -fx-text-fill: white;
+    -fx-background-size: 75px;
+   
+    
+    
+     
+   
+}*/
+
+.angr
+{
+     
+    -fx-background-color:cccccc;
+    -fx-background-radius: 5;
+}
+
+.butto:hover
+{
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 15, 0.0 , 0 , 0 );
+  
+}
+.buttn:hover
+{
+    
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 2, 0.0 , 0 , 0 );
+  
+}
+.border
+{
+    -fx-border-color:#60b000;
+}
+
+
+.oddRoundElement {
+/*	-fx-background-radius: 30;*/
+       
+        -fx-background-color: white;
+/*      -fx-background-radius:  30;
+       -fx-border-radius: 30;*/
+        -fx-border-color:#60b000;
+    
+}
+
+
+.label1
+{
+   -fx-background-color: #b0c4de;
+   -fx-border-color: black;
+}
+
+.oddRound {
+/*	-fx-background-radius: 30;*/
+       
+        -fx-background-color: white;
+       -fx-background-radius:  10;
+      -fx-border-radius: 10;
+        -fx-border-color:#7e7e7e;
+        -fx-border-width:2 3 1 1;
+        
+    
+}
+
+
+.btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #60b000; 
+}
+
+.login_img
+{
+    -fx-background-image: url("loginN.png");
+/*    -fx-background-color:orange;*/
+}
+
+.login_btn
+{
+     -fx-background-color: transparent;
+     -fx-background-image: url("Login-blue.png");
+}
+
+.cancel
+{
+    -fx-background-color: transparent;
+     -fx-background-image: url("closeeee.png");
+}
+
+.miw
+{
+    -fx-background-image: url("miw.png"); 
+}
+
+
+
+
+
+
+
+
+
+ 
+

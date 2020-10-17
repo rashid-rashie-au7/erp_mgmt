@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="931.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Rpt_SalesReturn.ReturnItemsController">
+   <children>
+      <TableView fx:id="tblview" layoutX="14.0" layoutY="78.0" prefHeight="411.0" prefWidth="908.0">
+         <columns>
+            <TableColumn fx:id="colbar" prefWidth="110.0" text="BarCode " />
+            <TableColumn fx:id="colcode" prefWidth="110.0" text="Item Code " />
+            <TableColumn fx:id="colname" prefWidth="200.0" text="Item Name" />
+            <TableColumn fx:id="colrate" prefWidth="100.0" text="Rate" />
+            <TableColumn fx:id="colqty" prefWidth="85.0" text="Qty" />
+            <TableColumn fx:id="colgst" text="Gst %" />
+            <TableColumn fx:id="colgstamt" prefWidth="100.0" text="Gst Amount" />
+            <TableColumn fx:id="coltot" prefWidth="120.0" text="Total Amount" />
+         </columns>
+      </TableView>
+      <Label layoutX="62.0" layoutY="17.0" text="Sales Return Report" textFill="#08a48d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="600.0" endY="-1.52587890625E-5" layoutX="316.0" layoutY="36.0" startX="-73.0" startY="-1.52587890625E-5" strokeWidth="0.5" />
+      <ImageView fitHeight="55.0" fitWidth="63.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/Cheff%20Summary.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="T_Purchase.Create_POController">
+   <children>
+      <Label layoutX="60.0" layoutY="44.0" text="Purchase ID :" />
+      <Label layoutX="60.0" layoutY="76.0" text="Date &amp; Time :" />
+      <Label layoutX="606.0" layoutY="44.0" text="Supplier :" />
+      <Label layoutX="58.0" layoutY="140.0" text="Order Status :" />
+      <Label layoutX="60.0" layoutY="108.0" text="Invoice No :" />
+      <Label layoutX="36.0" layoutY="241.0" />
+      <Label layoutX="606.0" layoutY="76.0" text="City:" />
+      <Label layoutX="606.0" layoutY="172.0" prefHeight="17.0" prefWidth="40.0" text="GSTIN :" />
+      <Label layoutX="606.0" layoutY="108.0" text="State :" />
+      <Label layoutX="606.0" layoutY="140.0" text="Phone :" />
+      <TextField fx:id="txtPoID" editable="false" focusTraversable="false" layoutX="186.0" layoutY="40.0" prefHeight="25.0" prefWidth="201.0" />
+      <Label layoutX="12.0" layoutY="8.0" text="Purchase Order Information">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="100.0" endY="0.0" layoutX="291.0" layoutY="18.0" startX="-100.0" startY="0.0" />
+      <Label layoutX="555.0" layoutY="8.0" text="Supplier Information">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="192.0" endY="-1.0" layoutX="717.0" layoutY="18.0" startX="-20.0" startY="-1.0" />
+      <ImageView fitHeight="32.25" fitWidth="32.25" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../../../Mikab/src/res/1384870965_order-1.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dpDate" focusTraversable="false" layoutX="186.0" layoutY="72.0" prefHeight="25.0" prefWidth="122.0" />
+      <TextField fx:id="txtTime" editable="false" focusTraversable="false" layoutX="315.0" layoutY="72.0" prefHeight="25.0" prefWidth="73.0" />
+      <RadioButton fx:id="rbtOpen" layoutX="209.0" layoutY="140.0" mnemonicParsing="false" text="Open " />
+      <RadioButton fx:id="rbtClose" layoutX="294.0" layoutY="140.0" mnemonicParsing="false" text="Close" />
+      <TextField fx:id="txtInvoice" layoutX="187.0" layoutY="104.0" prefHeight="25.0" prefWidth="201.0" />
+      <Label fx:id="lblClose" layoutX="60.0" layoutY="169.0" text="Date &amp; Time :" />
+      <DatePicker fx:id="dpCloseDate" layoutX="188.0" layoutY="168.0" prefHeight="25.0" prefWidth="122.0" />
+      <TextField fx:id="txtCloseTime" editable="false" focusTraversable="false" layoutX="317.0" layoutY="168.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="txtCity" editable="false" focusTraversable="false" layoutX="708.0" layoutY="72.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="txtState" editable="false" focusTraversable="false" layoutX="708.0" layoutY="104.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="txtmob" editable="false" focusTraversable="false" layoutX="708.0" layoutY="136.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="txtgstno" editable="false" focusTraversable="false" layoutX="708.0" layoutY="168.0" prefHeight="25.0" prefWidth="201.0" />
+      <HBox fx:id="hbxSupplier" layoutX="709.0" layoutY="40.0" prefHeight="25.0" prefWidth="200.0" />
+      <ImageView fitHeight="32.2498779296875" fitWidth="32.2498779296875" layoutX="555.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../../../Mikab/src/res/1385467086_Customer_Male_Light.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblView" layoutX="7.0" layoutY="204.0" prefHeight="252.0" prefWidth="917.0">
+        <columns>
+          <TableColumn fx:id="colitem" prefWidth="185.0" resizable="false" text="Item Name" />
+            <TableColumn fx:id="colqty" resizable="false" text="Qty" />
+            <TableColumn fx:id="coluom" prefWidth="60.0" resizable="false" text="UoM" />
+            <TableColumn fx:id="colrate" prefWidth="100.0" resizable="false" text="Rate " />
+            <TableColumn fx:id="colsgst" prefWidth="50.0" resizable="false" text="SGST %" />
+            <TableColumn fx:id="colcgst" prefWidth="50.0" resizable="false" text="CGST %" />
+            <TableColumn fx:id="coligst" prefWidth="50.0" resizable="false" text="IGST %" />
+            <TableColumn fx:id="coltot" prefWidth="110.0" resizable="false" text="Total" />
+            <TableColumn fx:id="colgst" prefWidth="110.0" resizable="false" text="GST" />
+            <TableColumn fx:id="coltotal" prefWidth="120.0" resizable="false" text="Net Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="75.0" layoutY="481.0" text="SGST :" />
+      <Label layoutX="75.0" layoutY="513.0" text="CGST :" />
+      <Label layoutX="77.0" layoutY="546.0" text="IGST :" />
+      <Label layoutX="369.0" layoutY="524.0" text="TOTAL GST AMOUNT :" />
+      <Label layoutX="369.0" layoutY="564.0" text="TOTAL AMOUT :" />
+      <Label layoutX="370.0" layoutY="488.0" text="GRAND TOTAL :" />
+      <TextField fx:id="txtsgst" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="135.0" layoutY="477.0" prefHeight="25.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtcgst" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="135.0" layoutY="508.0" prefHeight="25.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtigst" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="135.0" layoutY="541.0" prefHeight="25.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtgrandtot" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="507.0" layoutY="476.0" prefHeight="30.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtgstamt" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="507.0" layoutY="516.0" prefHeight="30.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txttot" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="507.0" layoutY="554.0" prefHeight="35.0" prefWidth="159.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnsave" layoutX="791.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnsave_onaction" prefHeight="43.0" prefWidth="122.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="SAVE" />
+      <Button fx:id="btnclear" layoutX="791.0" layoutY="547.0" mnemonicParsing="false" onAction="#clear_onaction" prefHeight="43.0" prefWidth="122.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="CLEAR" />
+      <Button fx:id="btnupdate" layoutX="791.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnupdate_onaction" prefHeight="43.0" prefWidth="122.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="UPDATE" />
+      <Hyperlink fx:id="hplRemove" layoutX="872.0" layoutY="460.0" onAction="#removeOnaction" text="Remove" textFill="#f20707">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

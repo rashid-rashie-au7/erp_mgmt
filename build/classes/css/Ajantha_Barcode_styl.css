@@ -1,0 +1,120 @@
+/* 
+    Document   : brand_creatn_styl
+    Created on : Apr 30, 2013, 1:21:28 PM
+    Author     : miw3
+ 
+   Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+
+
+
+.button{
+
+/*    -fx-background-color: #60b000; 
+  
+  -fx-text-fill: white;
+ 
+   -fx-background-size: 75px;
+*/
+   -fx-base:#60b000; 
+
+}
+
+
+
+.angr
+{
+   
+  
+    -fx-background-color:#f6f3f3;
+
+}
+
+
+/*.button:hover
+{
+ 
+ -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 15, 0.0 , 0 , 1 );
+
+  
+}*/
+
+.border
+{
+ 
+   -fx-border-color:#60b000;
+
+}
+
+
+
+
+.angr
+{
+    
+ 
+    -fx-background-color:rgb(174,219,255);
+  
+  -fx-background-radius: 5;
+
+}
+
+
+.oddRoundElement {
+
+/*	-fx-background-radius: 30;*/
+       
+
+        -fx-background-color: white;
+   
+    -fx-background-radius:  30;
+      
+ -fx-border-radius: 30;
+      
+  -fx-border-color:#60b000;
+  
+  
+}
+
+
+
+.label1
+{
+   -fx-background-color: #b0c4de;
+ 
+  -fx-border-color: black;
+
+}
+
+
+.oddRound {
+
+/*	-fx-background-radius: 30;*/
+    
+   
+        -fx-background-color: white;
+    
+   -fx-background-radius:  20;
+  
+    -fx-border-radius: 20;
+      
+  -fx-border-color:#60b000;
+ 
+   
+}
+
+
+
+
+
+
+
+ 
+

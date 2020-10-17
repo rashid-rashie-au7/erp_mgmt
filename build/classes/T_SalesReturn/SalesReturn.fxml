@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="T_SalesReturn.SalesReturnController">
+   <children>
+      <Label fx:id="lblBillNo" layoutX="65.0" layoutY="69.0" text="Bill No :" />
+      <TextField fx:id="txtbillno" editable="false" focusTraversable="false" layoutX="156.0" layoutY="65.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="65.0" layoutY="100.0" text="Date &amp; Time :" />
+      <DatePicker fx:id="dpDate" editable="false" focusTraversable="false" layoutX="156.0" layoutY="96.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtTime" editable="false" focusTraversable="false" layoutX="267.0" layoutY="96.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="65.0" layoutY="131.0" text="Ware House :" />
+      <Label layoutX="427.0" layoutY="131.0" text="Agent :" />
+      <Label layoutX="423.0" layoutY="38.0" text="Client ID :" />
+      <TextField fx:id="txtid" editable="false" layoutX="518.0" layoutY="34.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="423.0" layoutY="69.0" text="Client Name :" />
+      <Label layoutX="423.0" layoutY="100.0" text="Mobile :" />
+      <TextField fx:id="txtmob" editable="false" layoutX="518.0" layoutY="96.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="721.0" layoutY="100.0" text="State :" />
+      <Label layoutX="721.0" layoutY="38.0" text="Place :" />
+      <TextField fx:id="txtplace" editable="false" layoutX="801.0" layoutY="34.0" prefWidth="175.0" />
+      <Label layoutX="721.0" layoutY="69.0" text="District :" />
+      <TextField fx:id="txtdist" editable="false" layoutX="801.0" layoutY="65.0" prefWidth="175.0" />
+      <Label layoutX="721.0" layoutY="131.0" text="GSTIN :" />
+      <TextField fx:id="txtgstin" editable="false" layoutX="801.0" layoutY="127.0" prefHeight="25.0" prefWidth="175.0" />
+      <AnchorPane id="AnchorPane" layoutX="9.0" layoutY="9.0">
+         <children>
+            <Label layoutX="0.0" layoutY="0.0" text="Bill Information">
+               <font>
+                  <Font name="System Bold" size="13.0" fx:id="x1" />
+               </font>
+               <textFill>
+                  <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+               </textFill>
+            </Label>
+            <Line endX="100.0" endY="0.0" layoutX="228.0" layoutY="12.0" startX="-127.0" startY="0.0" />
+            <Label font="$x1" layoutX="375.0" text="Customer Information" textFill="#001899" />
+            <Line endX="322.0" endY="-0.9999847412109375" layoutX="647.0" layoutY="13.0" startX="-129.0" startY="-0.9999847412109375" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblview" layoutX="7.0" layoutY="181.0" prefHeight="255.0" prefWidth="990.0">
+         <columns>
+            <TableColumn fx:id="colbar" prefWidth="110.0" text="BarCode " />
+            <TableColumn fx:id="colcode" prefWidth="110.0" text="Item Code " />
+            <TableColumn fx:id="colname" prefWidth="200.0" text="Item Name" />
+            <TableColumn fx:id="colrate" prefWidth="100.0" text="Rate" />
+            <TableColumn fx:id="colqty" prefWidth="85.0" text="Qty" />
+            <TableColumn fx:id="colgst" text="Gst %" />
+            <TableColumn fx:id="colgstamt" prefWidth="100.0" text="Gst Amount" />
+            <TableColumn fx:id="coltot" prefWidth="120.0" text="Total Amount" />
+            <TableColumn fx:id="colselect" prefWidth="82.5" resizable="false" text="Select" />
+         </columns>
+      </TableView>
+      <AnchorPane fx:id="anchrtot" layoutX="453.0" layoutY="441.0" prefHeight="210.0" prefWidth="307.0" styleClass="oddRoundElement" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="24.0" layoutY="10.0" text="No of Items :" />
+            <Label layoutX="17.0" layoutY="176.0" text="Net Amount :">
+               <font>
+                  <Font name="System Bold" size="13.5" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="104.0" text="Discount :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="71.0" text="Gst Amount :">
+               <font>
+                  <Font name="System Bold" size="12.5" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="36.0" text="Grand Total">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblqty" layoutX="264.0" layoutY="11.0" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="197.0" layoutY="10.0" text="Total Qty :" />
+            <Label fx:id="lblitems" layoutX="108.0" layoutY="12.0" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtgrand" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="33.0" prefHeight="29.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.5" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtgstamt" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="68.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdiscper" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="100.0" prefHeight="25.0" prefWidth="59.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdisc" alignment="CENTER_RIGHT" editable="false" layoutX="213.0" layoutY="100.0" prefHeight="25.0" prefWidth="69.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtship" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="134.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtnetamt" alignment="CENTER_RIGHT" editable="false" layoutX="134.0" layoutY="166.0" prefHeight="30.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="196.0" layoutY="104.0" text="\%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="103.0" text="₹">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="137.0" text="Shippment Charge :">
+               <font>
+                  <Font name="System Bold" size="11.7" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchrtot1" layoutX="90.0" layoutY="471.0" prefHeight="147.0" prefWidth="293.0" styleClass="border1" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="18.0" layoutY="116.0" text="IGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="81.0" text="CGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="45.0" text="SGST :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtsgst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="42.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtcgst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtigst" alignment="CENTER_RIGHT" editable="false" layoutX="130.0" layoutY="112.0" prefHeight="25.0" prefWidth="149.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rbtsgst" layoutX="70.0" layoutY="9.0" mnemonicParsing="false" text="SGST " />
+            <RadioButton fx:id="rbtigst" layoutX="173.0" layoutY="9.0" mnemonicParsing="false" text="IGST" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnPrint" layoutX="801.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnprint_onAction" prefHeight="57.0" prefWidth="149.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Return Sales" />
+      <TextField fx:id="txtstate" editable="false" layoutX="801.0" layoutY="96.0" prefWidth="175.0" />
+      <Label fx:id="lblBillNo1" layoutX="65.0" layoutY="38.0" text="Return ID : " />
+      <TextField fx:id="txtrtID" editable="false" focusTraversable="false" layoutX="156.0" layoutY="34.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtname" editable="false" layoutX="518.0" layoutY="65.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="423.0" layoutY="159.0" text="Please Tick the Item you want to Return" textFill="#f80303" />
+      <TextField fx:id="txtagent" editable="false" layoutX="519.0" layoutY="127.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtwh" editable="false" layoutX="156.0" layoutY="127.0" prefHeight="25.0" prefWidth="175.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="486.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="M_Warehouse.WarehouseController">
+   <children>
+      <Label layoutX="60.0" layoutY="11.0" prefHeight="30.0" prefWidth="191.0" text="Ware House Creation" textFill="#33b6ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="160.0" layoutX="319.0" layoutY="33.0" startX="-68.0" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/warehose.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="80.0" layoutY="61.0" text="Ware House Code :" />
+      <TextField fx:id="txt_Code" editable="false" focusTraversable="false" layoutX="194.0" layoutY="57.0" prefWidth="191.0" />
+      <Label layoutX="80.0" layoutY="103.0" text="WareHouse Name :" />
+      <TextField fx:id="txt_name" layoutX="194.0" layoutY="99.0" prefWidth="191.0" />
+      <Label layoutX="80.0" layoutY="143.0" text="GSTIN :" />
+      <TextField fx:id="txt_Short" layoutX="194.0" layoutY="139.0" prefWidth="191.0" />
+      <TableView fx:id="table_main" layoutX="7.0" layoutY="225.0" prefHeight="285.0" prefWidth="470.0" stylesheets="@../../../LabMgmtSys/src/css/tableView.css">
+         <columns>
+            <TableColumn fx:id="col_code" maxWidth="5000.0" minWidth="10.0" prefWidth="84.0" text=" Code" />
+            <TableColumn fx:id="col_name" maxWidth="5000.0" minWidth="10.0" prefWidth="215.0" text="Ware House Name" />
+            <TableColumn fx:id="col_gst" maxWidth="5000.0" minWidth="10.0" prefWidth="170.0" text="GSTIN" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="292.0" layoutY="516.0" mnemonicParsing="false" onAction="#btn_delete_onAction" prefHeight="35.0" prefWidth="88.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Delete" />
+      <Button fx:id="btnPrint" layoutX="389.0" layoutY="516.0" mnemonicParsing="false" onAction="#btnPrint_onAction" prefHeight="35.0" prefWidth="88.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Print" />
+      <Button fx:id="btn_save" layoutX="151.0" layoutY="175.0" mnemonicParsing="false" onAction="#save_action" prefHeight="40.0" prefWidth="90.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Save" />
+      <Button fx:id="btn_Update" layoutX="152.0" layoutY="175.0" mnemonicParsing="false" onAction="#update_action" prefHeight="40.0" prefWidth="90.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Update" />
+      <Button fx:id="btn_clr" layoutX="287.0" layoutY="175.0" mnemonicParsing="false" onAction="#clr_action" prefHeight="40.0" prefWidth="90.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear" />
+   </children>
+</AnchorPane>

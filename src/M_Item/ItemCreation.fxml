@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="M_Item.ItemCreationController">
+   <children>
+      <Label layoutX="60.0" layoutY="47.0" text="Item Name :" />
+      <TextField fx:id="txtName" layoutX="154.0" layoutY="43.0" />
+      <Label layoutX="350.0" layoutY="47.0" text="Item Code :" />
+      <TextField fx:id="txtCode" editable="false" focusTraversable="false" layoutX="458.0" layoutY="43.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="58.0" layoutY="82.0" text="Category :" />
+      <HBox fx:id="hbx_Cat" layoutX="154.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="350.0" layoutY="81.0" text="Sub Category :" />
+      <HBox fx:id="hbxSubcat" layoutX="459.0" layoutY="78.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="56.0" layoutY="118.0" text="Brand :" />
+      <HBox fx:id="hbxBrand" layoutX="153.0" layoutY="113.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="350.0" layoutY="118.0" text="HSN Code :" />
+      <TextField fx:id="txtHsn" layoutX="458.0" layoutY="114.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="55.0" layoutY="153.0" text="Stock :" />
+      <TextField fx:id="txtStock" layoutX="154.0" layoutY="149.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="361.0" layoutY="153.0" text="UoM :" />
+      <HBox fx:id="hbxUom" layoutX="459.0" layoutY="149.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="66.0" layoutY="240.0" text="MRP:" />
+      <TextField fx:id="txtMrp" layoutX="149.0" layoutY="236.0" />
+      <Label layoutX="66.0" layoutY="276.0" text="WholeSale  :" />
+      <TextField fx:id="txtRate" layoutX="149.0" layoutY="272.0" />
+      <Label layoutX="66.0" layoutY="312.0" text="GST Slab:" />
+      <HBox fx:id="hbxGst" layoutX="149.0" layoutY="308.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="382.0" layoutY="240.0" text="Batch No :" />
+      <TextField fx:id="txtbatch" layoutX="459.0" layoutY="236.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="382.0" layoutY="276.0" text="Barcode :" />
+      <TextField fx:id="txtbarcode" layoutX="459.0" layoutY="272.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="382.0" layoutY="312.0" text="Expiry Date :" />
+      <DatePicker fx:id="dpexpiry" layoutX="460.0" layoutY="308.0" prefHeight="25.0" prefWidth="159.0" />
+      <Button fx:id="btnSave" layoutX="188.0" layoutY="372.0" mnemonicParsing="false" onAction="#Save_Onaction" prefHeight="48.0" prefWidth="127.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Save" />
+      <Button fx:id="btnUpdate" layoutX="188.0" layoutY="372.0" mnemonicParsing="false" onAction="#update_onAction" prefHeight="48.0" prefWidth="127.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Update" />
+      <Button fx:id="btnClear" layoutX="368.0" layoutY="372.0" mnemonicParsing="false" onAction="#clear_onAction" prefHeight="48.0" prefWidth="127.0" styleClass="oddRoundElement" stylesheets="@../css/Ajantha_Barcode_styl.css" text="Clear" />
+      <Label layoutX="5.0" layoutY="7.0" text="General Details :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Line endX="470.0" layoutX="166.0" layoutY="19.0" startX="-55.0" startY="0.0" />
+      <Label layoutX="12.0" layoutY="200.0" text="Price Details :">
+         <font>
+            <!--<Font name="System Bold" size="13.0" fx:id="x1" />-->
+         </font>
+         <textFill>
+            <!--<Color blue="0.600" green="0.096" red="0.000" fx:id="x2" />-->
+         </textFill>
+      </Label>
+      <Line endX="105.0" endY="0.0" layoutX="209.0" layoutY="214.0" startX="-110.0" startY="-0.5" />
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="10.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/prdt.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="12.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/price.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="332.0" layoutY="200.0" text="Batch Details :">
+         <font>
+            <Font name="System Bold" size="13.0" fx:id="x11" />
+         </font>
+         <textFill>
+            <Color blue="0.600" green="0.096" red="0.000" fx:id="x21" />
+         </textFill>
+      </Label>
+      <Line endX="106.0" endY="-0.5" layoutX="528.0" layoutY="214.0" startX="-106.0" startY="-0.5" />
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="332.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+         <image>
+            <Image url="@../res/barcode.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

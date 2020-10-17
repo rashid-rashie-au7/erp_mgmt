@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Rpt_POrtn.ReturnItemsController">
+   <children>
+      <Label layoutX="62.0" layoutY="17.0" text="Purchase Return Report" textFill="#08a48d">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="547.0" endY="-1.52587890625E-5" layoutX="316.0" layoutY="36.0" startX="-37.0" startY="-1.52587890625E-5" strokeWidth="0.5" />
+      <ImageView fitHeight="55.0" fitWidth="63.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/Cheff%20Summary.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblView" layoutX="17.0" layoutY="86.0" prefHeight="394.0" prefWidth="848.0">
+         <columns>
+            <TableColumn fx:id="colitem" prefWidth="185.0" resizable="false" text="Item Name" />
+            <TableColumn fx:id="colqty" prefWidth="60.0" resizable="false" text="Qty" />
+            <TableColumn fx:id="coluom" prefWidth="60.0" resizable="false" text="UoM" />
+            <TableColumn fx:id="colrate" prefWidth="90.0" resizable="false" text="Rate " />
+            <TableColumn fx:id="colsgst" prefWidth="50.0" resizable="false" text="SGST %" />
+            <TableColumn fx:id="colcgst" prefWidth="50.0" resizable="false" text="CGST %" />
+            <TableColumn fx:id="coligst" prefWidth="50.0" resizable="false" text="IGST %" />
+            <TableColumn fx:id="coltot" prefWidth="100.0" resizable="false" text="Total" />
+            <TableColumn fx:id="colgst" prefWidth="100.0" resizable="false" text="GST" />
+            <TableColumn fx:id="coltotal" prefWidth="100.0" resizable="false" text="Net Amount" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
